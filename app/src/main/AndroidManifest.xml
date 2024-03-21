@@ -13,6 +13,9 @@
         android:theme="@style/MAA"
         tools:targetApi="31">
         <activity
+            android:name=".activity.LoginActivity"
+            android:exported="false" />
+        <activity
             android:name=".activity.ForgotActivity"
             android:exported="false" />
         <activity
@@ -24,7 +27,7 @@
             android:exported="false"
             android:theme="@style/MAA" />
         <activity
-            android:name=".activity.LoginActivity"
+            android:name=".activity.SplashScreen"
             android:exported="true"
             android:theme="@style/MAA">
             <intent-filter>
