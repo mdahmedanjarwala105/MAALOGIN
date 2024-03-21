@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">MAALOGIN</string>
+    <string name="logo">LOGO</string>
+    <string name="mobile_number1">Mobile Number</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="forgot_password">Forgot Password</string>
+    <string name="new_account">Don\' t Have an Account?</string>
+    <string name="name">Name\n</string>
+    <string name="email1">Email</string>
+    <string name="password1">Password\n</string>
+    <string name="password2">Re-enter Password</string>
+    <string name="register">Register</string>
+    <string name="log_out">Log Out</string>
+    <string name="preference_file_name">MAA Preference</string>
+    <string name="delete_account">Delete Account</string>
+    <string name="write">Enter your registered mobile number and email below:</string>
+</resources>

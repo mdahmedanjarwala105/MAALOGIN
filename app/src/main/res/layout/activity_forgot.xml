@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/orange"
+    tools:context=".activity.ForgotActivity">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        app:cardCornerRadius="24dp"
+        android:layout_margin="10dp"
+        android:elevation="10dp"
+        android:id="@+id/imgLogo"
+        android:layout_centerHorizontal="true">
+
+        <ImageView
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:contentDescription="@string/logo"
+            android:src="@drawable/logo" />
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/txt_write"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/write"
+        android:textColor="@color/brown"
+        android:textStyle="bold|italic"
+        android:layout_below="@+id/imgLogo"
+        android:textSize="18sp"
+        android:layout_margin="12dp"
+        android:paddingTop="9dp"
+        android:gravity="center"/>
+
+    <EditText
+        style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+        android:id="@+id/et_mobile_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txt_write"
+        android:background="@color/white"
+        android:layout_margin="20dp"
+        android:padding="7dp"
+        android:hint="@string/mobile_number1"
+        android:inputType="phone"
+        android:textColor="@color/orange"
+        android:autofillHints="1234567890"
+        android:drawableStart="@drawable/ic_iphone"
+        android:drawablePadding="5dp"/>
+
+    <EditText
+        style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+        android:id="@+id/et_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/et_mobile_number"
+        android:background="@color/white"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:padding="7dp"
+        android:hint="@string/email1"
+        android:inputType="textEmailAddress"
+        android:textColor="@color/orange"
+        android:autofillHints="something@gmail.com"
+        android:drawableStart="@drawable/ic_email"
+        android:drawablePadding="5dp"/>
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/brown"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:text="@string/login"
+        android:textColor="@color/orange"
+        android:textSize="20sp"/>
+
+</RelativeLayout>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/orange"
+    tools:context=".activity.LoginActivity">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        app:cardCornerRadius="24dp"
+        android:layout_margin="10dp"
+        android:elevation="10dp"
+        android:id="@+id/imgLogo"
+        android:layout_centerHorizontal="true">
+
+        <ImageView
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:contentDescription="@string/logo"
+            android:src="@drawable/logo" />
+
+    </androidx.cardview.widget.CardView>
+
+    <EditText
+        style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+        android:id="@+id/et_mobile_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/mobile_number1"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_below="@id/imgLogo"
+        android:inputType="phone"
+        android:background="@color/white"
+        android:textColor="@color/orange"
+        android:padding="4.5dp"
+        android:layout_marginTop="20dp"
+        android:autofillHints="0123456789"
+        android:drawableStart="@drawable/ic_iphone"
+        android:drawablePadding="5dp"/>
+
+    <EditText
+        style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+        android:id="@+id/et_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/password"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="23dp"
+        android:layout_below="@id/et_mobile_number"
+        android:inputType="textPassword"
+        android:textColor="@color/orange"
+        android:background="@color/white"
+        android:padding="4.5dp"
+        android:autofillHints="Password"
+        android:drawableStart="@drawable/ic_lock"
+        android:drawablePadding="5dp"/>
+
+    <TextView
+        android:id="@+id/txt_forgotPass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/forgot_password"
+        android:layout_below="@id/et_password"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:gravity="center_horizontal"
+        android:textSize="17sp"
+        android:textColor="@color/brown"
+        android:textStyle="italic"/>
+
+    <TextView
+        android:id="@+id/txt_register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/new_account"
+        android:layout_below="@id/txt_forgotPass"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:gravity="center_horizontal"
+        android:textSize="17sp"
+        android:textColor="@color/brown"
+        android:textStyle="italic"/>
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/brown"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:text="@string/login"
+        android:textColor="@color/orange"
+        android:textSize="20sp"/>
+
+</RelativeLayout>
