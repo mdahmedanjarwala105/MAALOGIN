@@ -1,5 +1,6 @@
 package com.maa.maalogin.activity
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
@@ -62,5 +63,19 @@ class ForgotActivity : AppCompatActivity() {
                 }
             }
         }
+    }
+    override fun onBackPressed() {
+        super.onBackPressed()
+        val intent = Intent(this@ForgotActivity, LoginActivity::class.java)
+        intent.putExtra("email", emailVal.toString())
+        intent.putExtra("mobileNum", mobileNumVal.toString())
+        intent.putExtra("password", password.toString())
+        startActivity(intent)
+        finish()
+    }
+
+    override fun onPause() {
+        super.onPause()
+        finish()
     }
 }

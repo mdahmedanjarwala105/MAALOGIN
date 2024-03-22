@@ -113,4 +113,9 @@ class LoginActivity : AppCompatActivity() {
         sharedPreferences.edit().putString("mobileNumber", mobileNumber).apply()
         sharedPreferences.edit().putString("password", password).apply()
     }
+
+    override fun onPause() {
+        super.onPause()
+        finish()
+    }
 }

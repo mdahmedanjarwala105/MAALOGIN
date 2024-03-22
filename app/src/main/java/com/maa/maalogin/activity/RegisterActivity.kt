@@ -142,4 +142,15 @@ class RegisterActivity : AppCompatActivity() {
             return false
         }
     }
+    override fun onBackPressed() {
+        super.onBackPressed()
+        val intent = Intent(this@RegisterActivity, LoginActivity::class.java)
+        startActivity(intent)
+        finish()
+    }
+
+    override fun onPause() {
+        super.onPause()
+        finish()
+    }
 }
