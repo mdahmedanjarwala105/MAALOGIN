@@ -27,6 +27,12 @@ class RegisterActivity : AppCompatActivity() {
     private lateinit var btn_register: Button
     private lateinit var toolbar: Toolbar
 
+    var valName: String? = "name"
+    var valEmail: String? = "email@gmail.com"
+    var valMobileNum: String? = "0987654321"
+    var valPassword: String? = "password"
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -47,6 +53,13 @@ class RegisterActivity : AppCompatActivity() {
         toolbar = findViewById(R.id.toolbar)
         setSupportActionBar(toolbar)
         supportActionBar?.title = "Register Yourself"
+
+        if (intent != null) {
+            valName = intent.getStringExtra("name")
+            valEmail = intent.getStringExtra("email")
+            valMobileNum = intent.getStringExtra("mobileNum")
+            valPassword = intent.getStringExtra("password")
+        }
 
         btn_register.setOnClickListener() {
             val password1 = et_password1.text.toString()
@@ -145,6 +158,10 @@ class RegisterActivity : AppCompatActivity() {
     override fun onBackPressed() {
         super.onBackPressed()
         val intent = Intent(this@RegisterActivity, LoginActivity::class.java)
+        intent.putExtra("name", valName)
+        intent.putExtra("email", valEmail)
+        intent.putExtra("mobileNum", valMobileNum)
+        intent.putExtra("password", valPassword)
         startActivity(intent)
         finish()
     }

@@ -53,10 +53,10 @@ class MainActivity : AppCompatActivity() {
         setSupportActionBar(toolbar)
         supportActionBar?.title = "Your Account"
 
-        name.text = sharedPreferences.getString("name", name.toString())
-        email.text = sharedPreferences.getString("email", email.toString())
-        mobileNumber.text = sharedPreferences.getString("mobileNumber", mobileNumber.toString())
-        password.text = sharedPreferences.getString("password", password.toString())
+        name.text = sharedPreferences.getString("name", "")
+        email.text = sharedPreferences.getString("email", "")
+        mobileNumber.text = sharedPreferences.getString("mobileNumber", "")
+        password.text = sharedPreferences.getString("password", "")
 
         deleteUser.setOnClickListener{
 
@@ -74,7 +74,7 @@ class MainActivity : AppCompatActivity() {
                 val result = async.get()
 
                 if(result) {
-                    Toast.makeText(this@MainActivity, "Removed", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this@MainActivity, "Account Deleted", Toast.LENGTH_SHORT).show()
 
                     val intent = Intent(this@MainActivity, LoginActivity::class.java)
                     startActivity(intent)
@@ -108,7 +108,7 @@ class MainActivity : AppCompatActivity() {
                 password.text.toString()
             )
             if (DBAsyncTask(applicationContext, registerEntity, 1).execute().get()) {
-                Toast.makeText(this@MainActivity, "Logged Out", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this@MainActivity, "Logging Out", Toast.LENGTH_SHORT).show()
                 val intent = Intent(this@MainActivity, LoginActivity::class.java)
                 intent.putExtra("name", name.text.toString())
                 intent.putExtra("email", email.text.toString())

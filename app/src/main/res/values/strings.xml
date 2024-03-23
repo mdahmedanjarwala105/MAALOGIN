@@ -15,4 +15,5 @@
     <string name="preference_file_name">MAA Preference</string>
     <string name="delete_account">Delete Account</string>
     <string name="write">Enter your registered mobile number and email below:</string>
+    <string name="check">Check</string>
 </resources>

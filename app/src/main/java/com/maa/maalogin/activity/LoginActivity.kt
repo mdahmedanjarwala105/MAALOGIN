@@ -93,6 +93,10 @@ class LoginActivity : AppCompatActivity() {
 
         txt_register.setOnClickListener{
             val intent = Intent(this@LoginActivity, RegisterActivity::class.java)
+            intent.putExtra("name", name.toString())
+            intent.putExtra("mobileNum", mobileNum.toString())
+            intent.putExtra("email", email.toString())
+            intent.putExtra("password", password.toString())
             startActivity(intent)
         }
 

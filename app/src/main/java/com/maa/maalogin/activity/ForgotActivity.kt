@@ -17,6 +17,7 @@ class ForgotActivity : AppCompatActivity() {
     private lateinit var email: EditText
     private lateinit var btnLogin: Button
 
+    var nameVal: String? = "name"
     var mobileNumVal: String? = "0987654321"
     var emailVal: String? = "something@gmail.com"
     var password: String? = "password"
@@ -36,6 +37,7 @@ class ForgotActivity : AppCompatActivity() {
         btnLogin = findViewById(R.id.btn_login)
 
         if (intent != null) {
+            nameVal = intent.getStringExtra("name")
             emailVal = intent.getStringExtra("email")
             mobileNumVal = intent.getStringExtra("mobileNum")
             password = intent.getStringExtra("password")
@@ -67,6 +69,7 @@ class ForgotActivity : AppCompatActivity() {
     override fun onBackPressed() {
         super.onBackPressed()
         val intent = Intent(this@ForgotActivity, LoginActivity::class.java)
+        intent.putExtra("name", nameVal.toString())
         intent.putExtra("email", emailVal.toString())
         intent.putExtra("mobileNum", mobileNumVal.toString())
         intent.putExtra("password", password.toString())
